@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Handheld (red area) */
+.view-window {
+    width: 700px;
+    height: 600px;
+    background-color: rgb(255, 100, 100);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Drawing area */
+.container {
+    display: grid;
+    height:450px;
+    width: 550px;
+    background: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+/* Drawing Divs */
+.divs {
+    background-color: rgb(255, 255, 255);
+    border: 0.01em solid;
+    border-color: rgb(247, 247, 247);
+}
+
+.knob-container {
+    display: flex;
+    flex-direction: row;
+    width: 650px;
+    justify-content: space-between;
+}
+
+/* knobs */
+.turn1, .turn2 {
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+}
+
+
