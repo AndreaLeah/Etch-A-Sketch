@@ -1,6 +1,7 @@
 // Global Variable Declarations
 let divvies = document.querySelectorAll('div');
-const clearBtn = document.querySelector('.reset')
+const clearBtn = document.querySelector('.reset');
+const viewWindow = document.querySelector('.view-window');
 
 
 function divsWrapper (gridSize) {
@@ -19,10 +20,12 @@ function divsWrapper (gridSize) {
         });
     }};
 
-    divsWrapper(16);
+// Function Call
+divsWrapper(16);
 
-    clearBtn.addEventListener('click', function () {
-        location.reload();
-    });
+// Event Listener: Clear Game on Click
+clearBtn.addEventListener('click', function () {
+    location.reload();
+});
 
 
