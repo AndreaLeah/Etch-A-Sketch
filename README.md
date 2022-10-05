@@ -1,16 +1,12 @@
 # Etch-A-Sketch
 
-
-This project is part of [The Odin Project's](https://www.theodinproject.com/lessons/foundations-etch-a-sketch) curriculum. 
-This website has been made with HTML, CSS and Vanilla JS. 
-
-<br />
-
 **How To Use:**
 
-Drag your mouse across the Etch A Sketch's screen in order to draw. When you are done, select the eraser to clean the Etch A Sketch.  
+Drag your mouse across the Etch A Sketch's screen in order to draw. Select a color from the color picker to set the pen color to a specific color, or select the rainbow to set the pen color to multi-color.  
 
-Select a color from the color picker to change pen color, or select the rainbow to change to rainbow drawing.  
+Select the eraser to erase. If you would like to change the size of the Etch A Sketch's squares, drag the slider to the left or right.
+
+When you are done, select the clear button to clean the Etch A Sketch.  
 
 <br />
 
