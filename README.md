@@ -16,7 +16,7 @@ Select a color from the color picker to change pen color, or select the rainbow 
 
 [Live Demo](https://andrealeah.github.io/Etch-A-Sketch/)
 
-**Attribution:**
+**Attribution:**  
 Rainbow Icon created by Freepik, [source here] (https://www.flaticon.com/free-icons/rainbow)  
 Eraser Icon created by Freepik, [source here] (https://www.flaticon.com/free-icons/eraser")  
 GitHub Icon created by Pixel Perfect - Flaticon, [source here] (https://www.flaticon.com/free-icons/github)  
