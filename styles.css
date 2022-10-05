@@ -17,13 +17,6 @@ body {
     margin: 50px;
 }
 
-/* THE Container for all contents of body */
-.THE-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
 /* Main Container */
 .main-container {
     display: flex;
@@ -31,7 +24,7 @@ body {
     align-items: center;
     gap: 100px;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 1190px;
 }
 
 /* MenuBar */
