@@ -17,7 +17,7 @@ When you are done, select the clear button to clean the Etch A Sketch.
 <br />
 
 **Attribution:**  
-Rainbow Icon created by Freepik, [source here] (https://www.flaticon.com/free-icons/rainbow)  
-Eraser Icon created by Freepik, [source here] (https://www.flaticon.com/free-icons/eraser")  
-GitHub Icon created by Pixel Perfect - Flaticon, [source here] (https://www.flaticon.com/free-icons/github)  
-Favicon created by Creaticca Creaticca Creative Agency, [source here] (https://www.flaticon.com/free-icons/draw)
+Rainbow Icon created by Freepik, [source here](https://www.flaticon.com/free-icons/rainbow)  
+Eraser Icon created by Freepik, [source here](https://www.flaticon.com/free-icons/eraser")  
+GitHub Icon created by Pixel Perfect - Flaticon, [source here](https://www.flaticon.com/free-icons/github)  
+Favicon created by Creaticca Creaticca Creative Agency, [source here](https://www.flaticon.com/free-icons/draw)
