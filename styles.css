@@ -135,9 +135,8 @@ body {
 }
 
 /* Shake Effect Upon Clicking Clear Button */
-.view-window:active {
+.shake-it {
     animation: shake 0.5s;
-    animation-iteration-count: infinite;
 }
 
 @keyframes shake {

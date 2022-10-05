@@ -16,11 +16,14 @@ let randomColor = '';
 let rainbowMode = false;
 const borderRadius = "10px";
 const rainbowImg = "rainbow-img";
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
 
 
+// <<<<--------- FUNCTIONS ------------->>>> 
 
-// Functions 
-function createCanvas (gridSize, color) {
+function createCanvas (gridSize, chosenColor) {
     container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
@@ -28,33 +31,16 @@ function createCanvas (gridSize, color) {
     for (i = 0; i < (gridSize * gridSize); i++) {
         let div = document.createElement('div');
         div.classList.add("divs");
+        div.addEventListener('mousedown', changeDivColor);
         div.addEventListener('mouseover', changeDivColor);
-        container.appendChild(div)
+        container.appendChild(div);
     }
-
-    // Proportionally Set Corners of Screen Divs To Be Rounded
-    gridDivs[0].style.borderTopLeftRadius = borderRadius;
-    gridDivs[gridSize - 1].style.borderTopRightRadius = borderRadius;
-    gridDivs[(gridSize * gridSize) - 1].style.borderBottomRightRadius = borderRadius;
-    gridDivs[(gridSize * gridSize) - gridSize].style.borderBottomLeftRadius = borderRadius;
-};
-
-// Initial Function Call
-createCanvas(16, chosenColor);
-
-// Clear Screen on Click
-clearBtn.addEventListener('click', function () {
-    // Set Divs Background To White
-    for(let i=0;i<gridDivs.length;i++) {
-        gridDivs[i].style.backgroundColor = "#FFFFFF"; 
+        // Proportionally Set Corners of Screen Divs To Be Rounded
+        gridDivs[0].style.borderTopLeftRadius = borderRadius;
+        gridDivs[gridSize - 1].style.borderTopRightRadius = borderRadius;
+        gridDivs[(gridSize * gridSize) - 1].style.borderBottomRightRadius = borderRadius;
+        gridDivs[(gridSize * gridSize) - gridSize].style.borderBottomLeftRadius = borderRadius;
     };
-});
-
-colorPicker.onchange = (e) => setPenColor(e.target.value);
-eraserImg.onclick = () => setPenColor('#FFFFFF');
-rainbowIcon.onclick = () => setPenColor(rainbowImg);
-slider.onchange = (e) => gridReset(e.target.value);
-slider.onmousemove = (e) => updateSizeValue(e.target.value);
 
 // Reset Grid Size
 function gridReset(value) {
@@ -83,11 +69,40 @@ function setPenColor(value) {
 };
 
 function changeDivColor(e) {
-    if (rainbowMode) {
-        e.target.style.backgroundColor = setPenColor(rainbowImg);
-    }
+    if (e.type === 'mouseover' && !mouseDown) return;
+        if (rainbowMode) {
+            e.target.style.backgroundColor = setPenColor(rainbowImg);
+        }
 
-    e.target.style.backgroundColor = chosenColor;
+        e.target.style.backgroundColor = chosenColor;
 };
 
+function shakeIt() {
+    setTimeout(addShakeIt);
+    viewWindow.classList.remove('shake-it');
+};
 
+function addShakeIt () {
+    viewWindow.classList.add('shake-it');
+};
+
+// <<<<---------EVENTS/EVENT LISTENERS --------->>>>
+
+// Clear Screen on Click
+clearBtn.addEventListener('click', function () {
+    // Set Divs Background To White
+    for(let i=0;i<gridDivs.length;i++) {
+        gridDivs[i].style.backgroundColor = "#FFFFFF"; 
+    };
+});
+
+colorPicker.onchange = (e) => setPenColor(e.target.value);
+eraserImg.onclick = () => setPenColor('#FFFFFF');
+rainbowIcon.onclick = () => setPenColor(rainbowImg);
+slider.onchange = (e) => gridReset(e.target.value);
+slider.onmousemove = (e) => updateSizeValue(e.target.value);
+clearBtn.onclick = () => shakeIt();
+
+
+// Initial Function Call
+createCanvas(16, chosenColor);

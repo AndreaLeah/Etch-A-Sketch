@@ -2,7 +2,7 @@
 
 **How To Use:**
 
-Drag your mouse across the Etch A Sketch's screen in order to draw. Select a color from the color picker to set the pen color to a specific color, or select the rainbow to set the pen color to multi-color.  
+Click and hold your mouse across the Etch A Sketch's screen in order to draw. Select a color from the color picker to set the pen color to a specific color, or select the rainbow to set the pen color to multi-color.  
 
 Select the eraser to erase. If you would like to change the size of the Etch A Sketch's squares, drag the slider to the left or right.
 
@@ -12,7 +12,7 @@ When you are done, select the clear button to clean the Etch A Sketch.
 
 [Live Demo](https://andrealeah.github.io/Etch-A-Sketch/)
 
-![Project Gif](https://media.giphy.com/media/xueeAouN6HUu6B5xgy/giphy.gif)
+![Project Gif](https://media.giphy.com/media/WU88PVdm0OlxWVKD09/giphy.gif)
 
 <br />
 
