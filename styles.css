@@ -39,7 +39,6 @@ body {
     align-self: center;
     border-radius: 25px;
     width: 200px;
-    /* background-color: #9665ff; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -217,4 +216,9 @@ Grid Value Slider
 .github-img {
     height: 18px;
     width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
