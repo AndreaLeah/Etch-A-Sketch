@@ -16,6 +16,8 @@ Select a color from the color picker to change pen color, or select the rainbow 
 
 [Live Demo](https://andrealeah.github.io/Etch-A-Sketch/)
 
+![Project Gif](https://media.giphy.com/media/xueeAouN6HUu6B5xgy/giphy.gif)
+
 <br />
 
 **Attribution:**  
