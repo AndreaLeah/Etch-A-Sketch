@@ -5,19 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="styles.css"></style>
-    <script type="text/javascript" src="main.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/favicon.png?" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Font (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="handheld-body">
-        <div class="view-window">
-            <div class="container"></div>
-            <div class="knob-container">
-                <div class="turn1"></div>
-                <button class="reset">Clear</button>
-                <div class="turn2"></div>
+
+    <header>
+        <!-- Heading -->
+        <div class="heading">
+            <h1 class="title-heading">Etch-A-Sketch</h1>
+        </div>
+    </header>
+
+    <div class="THE-container">
+
+        <!-- Container for MenuBar & Etch-A-Sketch -->
+        <div class="main-container">
+            
+            <!-- MenuBar -->
+            <div class="menu-bar">
+                <!-- Color Picker -->
+                <input type="color" value="#000000" id="color-picker"></input>
+                <img src="icons/rainbow.png" id="rainbow-img">
+                <img src="icons/eraser.png" id="eraser-img">
+                <div class="slider-div">
+                    <label class="slider-label">16 x 16</label>
+                    <input type="range" min="1" max="100" value="16" class="slider">
+                </div>
+                
             </div>
+
+            <!-- Etch-A-Sketch Body -->
+            <div class="handheld-body">
+                <div class="view-window">
+
+                    <div class="container"></div>
+
+                    <div class="knob-container">
+                        <div class="turn1"></div>
+                        <button class="reset">Clear</button>
+                        <div class="turn2"></div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
+
+<footer id="footer">
+    <div class="footer-text">
+        <p>
+            Copyright &copy; 
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script> AndreaLeah 
+            <img src="icons/github.png" class="github-img">
+        </p>
+    </div>
+</footer>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
