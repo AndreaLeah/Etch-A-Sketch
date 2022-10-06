@@ -47,6 +47,7 @@ body {
     width: 100px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 #color-picker::-webkit-color-swatch {
@@ -57,6 +58,11 @@ body {
 #rainbow-img, #eraser-img {
     width: 100px;
     height: auto;
+    cursor: pointer;
+}
+
+#rainbow-img:hover, #eraser-img:hover, #color-picker:hover {
+    transform: scale(1.1);
 }
 
 /* Slider Div */
@@ -121,6 +127,7 @@ body {
 
 /* Clear/Reset Button */
 .reset {
+    cursor: pointer;
     align-self: center;
     height: 45px;
     width: 175px;
@@ -132,6 +139,10 @@ body {
     color: rgb(237, 167, 255);
     background-color:rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 8px;
+}
+
+.reset:hover {
+    transform: scale(1.05);
 }
 
 /* Shake Effect Upon Clicking Clear Button */
@@ -153,7 +164,7 @@ body {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-Grid Value Slider
+/* Grid Value Slider */
 .range-slider input {
     appearance: none;
     background: white;
@@ -191,6 +202,10 @@ Grid Value Slider
     height: 22px;
     background: #C689C6;
     cursor: pointer;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
   }
 
 /* Footer */
