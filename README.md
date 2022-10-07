@@ -12,7 +12,7 @@ When you are done, select the clear button to clean the Etch A Sketch.
 
 [Live Demo](https://andrealeah.github.io/Etch-A-Sketch/)
 
-![Project Gif](https://media.giphy.com/media/WU88PVdm0OlxWVKD09/giphy.gif)
+![Project Gif](https://media.giphy.com/media/v6qujdoJdwAirjjpRs/giphy.gif)
 
 <br />
 
