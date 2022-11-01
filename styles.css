@@ -2,6 +2,7 @@ body {
     width: 100vw;
     background-color: #fcf9f9;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 /* Heading */
