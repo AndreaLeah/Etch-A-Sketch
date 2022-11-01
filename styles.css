@@ -111,6 +111,12 @@ body {
 .divs {
     border: 0.5px solid;
     border-color: rgb(247, 247, 247); 
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Knob Container */
