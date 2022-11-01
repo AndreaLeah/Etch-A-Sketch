@@ -19,6 +19,8 @@ const rainbowImg = "rainbow-img";
 let mouseDown = false
 document.body.onmousedown = () => (mouseDown = true)
 document.body.onmouseup = () => (mouseDown = false)
+let selectedItems = document.querySelectorAll(".selected-items");
+let selectedClass = document.getElementsByClassName("selected");
 
 
 // <<<<--------- FUNCTIONS ------------->>>> 
@@ -56,13 +58,13 @@ function updateSizeValue(value) {
 };
 
 function setPenColor(value) {
+    console.log(value);
     if (value == rainbowImg) {
         randomColor = Math.floor(Math.random()*16777215).toString(16);
         chosenColor = `#${randomColor}`;
         rainbowMode = true;
         return chosenColor;
     }
-
     rainbowMode = false;
     chosenColor = value;
     return chosenColor;
@@ -86,22 +88,42 @@ function addShakeIt () {
     viewWindow.classList.add('shake-it');
 };
 
+function removeSelectedClass () {
+    selectedItems.forEach(item => {
+        item.classList.remove("selected");
+})};
+
 // <<<<---------EVENTS/EVENT LISTENERS --------->>>>
 
 // Clear Screen on Click
 clearBtn.addEventListener('click', function () {
+    shakeIt();
+    removeSelectedClass();
     // Set Divs Background To White
     for(let i=0;i<gridDivs.length;i++) {
         gridDivs[i].style.backgroundColor = "#FFFFFF"; 
     };
 });
 
+// Event Handlers
+colorPicker.onclick = (e) => setPenColor(e.target.value);
 colorPicker.onchange = (e) => setPenColor(e.target.value);
 eraserImg.onclick = () => setPenColor('#FFFFFF');
 rainbowIcon.onclick = () => setPenColor(rainbowImg);
 slider.onchange = (e) => gridReset(e.target.value);
 slider.onmousemove = (e) => updateSizeValue(e.target.value);
-clearBtn.onclick = () => shakeIt();
+
+// Onclick, Add Background Color To Selection
+selectedItems.forEach(item => {
+    item.addEventListener('click', event => {
+        if (selectedClass.length > 0) {
+        removeSelectedClass();
+        };
+
+        item.classList.add("selected");
+    })
+})
+
 
 
 // Initial Function Call
