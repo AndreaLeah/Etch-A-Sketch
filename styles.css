@@ -343,11 +343,14 @@ a:hover {
 
 @media screen and (max-width: 850px) {
 
+    html {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
     /* Mobile & Tablet Overlapping Settings */
 
     .THE-container {
-        overflow-x: hidden;
-        overflow-y: hidden;
         height: 100%;
         width: 100%;
         display: flex;
