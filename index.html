@@ -15,41 +15,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
 
-    <header>
-        <!-- Heading -->
+    <div class="THE-container">
+
+        
+                    <!-- Heading -->
         <div class="heading">
             <h1 class="title-heading">Etch-A-Sketch</h1>
         </div>
-    </header>
 
-    <div class="THE-container">
 
         <!-- Container for MenuBar & Etch-A-Sketch -->
         <div class="main-container">
             
-            <!-- MenuBar -->
-            <div class="menu-bar">
-                <!-- Color Picker -->
-                <div class="selected-items">
-                <input type="color" value="#000000" id="color-picker"></input>
-                </div>
+                    <!-- MenuBar -->
+                    <div class="menu-bar">
+                        <div class="color-selectors">
+                        <!-- Color Picker -->
+                        <div class="selected-items">
+                        <input type="color" value="#000000" id="color-picker"></input>
+                        </div>
 
-                <div class="selected-items">
-                <img src="icons/rainbow.png" id="rainbow-img">
-                </div>
+                        <div class="selected-items">
+                        <img src="icons/rainbow.png" id="rainbow-img">
+                        </div>
 
-                <div class="selected-items">
-                <img src="icons/eraser.png" id="eraser-img">
-                </div>
+                        <div class="selected-items">
+                        <img src="icons/eraser.png" id="eraser-img">
+                        </div>
+                        </div>
 
-                <div class="slider-div">
-                    <label class="slider-label">16 x 16</label>
-                    <input type="range" min="1" max="100" value="16" class="slider">
-                </div>
+                        <div class="slider-div">
+                            <label class="slider-label">16 x 16</label>
+                            <input type="range" min="1" max="100" value="16" class="slider">
+                        </div>
                 
-            </div>
+                    </div>
 
             <!-- Etch-A-Sketch Body -->
             <div class="handheld-body">
@@ -61,26 +65,28 @@
                         <div class="turn1"></div>
                         <button class="reset">Clear</button>
                         <div class="turn2"></div>
+                        
                     </div>
-
                 </div>
             </div>
-
-        </div>
+            </div>
     </div>
 </div>
 
-<footer id="footer">
-    <div class="footer-text">
-        <p>
-            Copyright &copy; 
-            <script type="text/javascript">
-                document.write(new Date().getFullYear());
-            </script> <a href="https://github.com/AndreaLeah" target="_blank">AndreaLeah</a> 
-            <img src="icons/github.png" class="github-img">
-        </p>
-    </div>
+<footer class="footer">
+<div class="footer-text">
+    <p>
+        Copyright &copy; 
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script> <a href="https://github.com/AndreaLeah" target="_blank">AndreaLeah</a> 
+        <img src="icons/github.png" class="github-img">
+    </p>
+</div>
 </footer>
+
+
+
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
