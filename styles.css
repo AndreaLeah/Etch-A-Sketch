@@ -16,7 +16,7 @@ html, body {
 } 
 
 .THE-container {
-    margin-bottom: 100px;;
+    margin-bottom: 100px;
 }
 
 /* Heading */
@@ -267,7 +267,7 @@ a:hover {
 
 /* Cell Phone Responsive Layout & Size */
 
-@media  (max-width: 450px) {
+@media screen and (max-width: 450px) {
     
     .heading {
         padding-top: 60px;
@@ -341,7 +341,7 @@ a:hover {
 
 /* Tablet Responsive Layout Size */
 
-@media  (max-width: 850px) {
+@media screen and (max-width: 850px) {
 
     /* Mobile & Tablet Overlapping Settings */
 
