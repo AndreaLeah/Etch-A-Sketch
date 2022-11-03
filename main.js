@@ -1,26 +1,27 @@
 // Global Variable Declarations
-const container = document.querySelector('.container')
-const clearBtn = document.querySelector('.reset');
-const viewWindow = document.querySelector('.view-window');
-let gridSizeSelection = 16;
-let array = [];
-// color picker element & color from picker
-const colorPicker = document.querySelector("#color-picker");
-let chosenColor = colorPicker.value;
-const eraserImg = document.getElementById("eraser-img");
-let gridDivs = document.getElementsByClassName("divs");
-const rainbowIcon = document.querySelector('#rainbow-img');
-const slider = document.querySelector('.slider');
-let sliderLabel = document.querySelector('.slider-label');
-let randomColor = '';
-let rainbowMode = false;
-const borderRadius = "10px";
-const rainbowImg = "rainbow-img";
-let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
-let selectedItems = document.querySelectorAll(".selected-items");
-let selectedClass = document.getElementsByClassName("selected");
+const container = document.querySelector('.container'),
+    clearBtn = document.querySelector('.reset'),
+    viewWindow = document.querySelector('.view-window'),
+    colorPicker = document.querySelector("#color-picker"),
+    eraserImg = document.getElementById("eraser-img"),
+    rainbowIcon = document.querySelector('#rainbow-img'), 
+    slider = document.querySelector('.slider'),
+    borderRadius = "10px",
+    rainbowImg = "rainbow-img";
+
+let gridSizeSelection = 16,
+    array = [];
+    chosenColor = colorPicker.value,
+    gridDivs = document.getElementsByClassName("divs"),
+    sliderLabel = document.querySelector('.slider-label'),
+    randomColor = '',
+    rainbowMode = false,
+    mouseDown = false,
+    selectedItems = document.querySelectorAll(".selected-items"),
+    selectedClass = document.getElementsByClassName("selected");
+
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
 
 
 // <<<<--------- FUNCTIONS ------------->>>> 
@@ -35,8 +36,10 @@ function createCanvas (gridSize, chosenColor) {
         div.classList.add("divs");
         div.addEventListener('mousedown', changeDivColor);
         div.addEventListener('mouseover', changeDivColor);
+        div.addEventListener('touchmove', changeDivColor);
         container.appendChild(div);
     }
+
         // Proportionally Set Corners of Screen Divs To Be Rounded
         gridDivs[0].style.borderTopLeftRadius = borderRadius;
         gridDivs[gridSize - 1].style.borderTopRightRadius = borderRadius;
@@ -71,13 +74,40 @@ function setPenColor(value) {
 };
 
 function changeDivColor(e) {
-    if (e.type === 'mouseover' && !mouseDown) return;
-        if (rainbowMode) {
-            e.target.style.backgroundColor = setPenColor(rainbowImg);
+    console.log(e);
+    console.log(e.target);
+    console.log(e.type);
+
+    if (e.type == 'touchmove') {
+
+
+        let x = e.changedTouches[0].clientX;
+        let y = e.changedTouches[0].clientY;
+
+        console.log(`This is x: ${x}`);
+        console.log(`This is y: ${y}`);
+
+        target = document.elementFromPoint(x, y);
+        console.log(`This is the target ${target}`);
+
+        if (target.className === "divs") {
+            if (rainbowMode) {
+                target.style.backgroundColor = setPenColor(rainbowImg);
+                }
+        
+            target.style.backgroundColor = chosenColor;
+        }
+    } else {
+
+    if (e.type === 'mouseover' && !mouseDown) {
+        return
+    }
+    if (rainbowMode) {
+        e.target.style.backgroundColor = setPenColor(rainbowImg);
         }
 
-        e.target.style.backgroundColor = chosenColor;
-};
+    e.target.style.backgroundColor = chosenColor;
+}};
 
 function shakeIt() {
     setTimeout(addShakeIt);
@@ -112,6 +142,8 @@ eraserImg.onclick = () => setPenColor('#FFFFFF');
 rainbowIcon.onclick = () => setPenColor(rainbowImg);
 slider.onchange = (e) => gridReset(e.target.value);
 slider.onmousemove = (e) => updateSizeValue(e.target.value);
+slider.addEventListener('touchmove', (e) => updateSizeValue(e.target.value));
+
 
 // Onclick, Add Background Color To Selection
 selectedItems.forEach(item => {
